@@ -33,12 +33,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
+        if billTextField.text!.isEmpty {
+            return
+        }
+        
+        let bill = Double(billTextField.text!)!
+        let tip = getSelectedTip()
+        let total = bill + bill * tip
+        let numberOfPeople = Double(splitNumberLabel.text!)!
+        let perPerson = total / numberOfPeople
+        print(perPerson)
     }
     
     private func resetButtonState() {
         zeroPctButton.isSelected = false
         tenPctButton.isSelected = false
         twentyPctButton.isSelected = false
+    }
+    
+    private func getSelectedTip() -> Double {
+        if zeroPctButton.isSelected {
+            return 0.0
+        }
+        
+        if tenPctButton.isSelected {
+            return 0.1
+        }
+        
+        return 0.2
     }
 }
 
