@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         let numberOfPeople = Double(splitNumberLabel.text!)!
         let perPerson = total / numberOfPeople
         print(perPerson)
+        performSegue(withIdentifier: "toResultsView", sender: nil)
     }
     
     private func resetButtonState() {
