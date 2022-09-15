@@ -19,14 +19,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
     
     @IBAction func tipChanged(_ sender: UIButton) {
         resetButtonState()
         sender.isSelected = true
     }
-    
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         splitNumberLabel.text = String(Int(sender.value))
@@ -37,13 +34,21 @@ class ViewController: UIViewController {
             return
         }
         
+        performSegue(withIdentifier: "toResultsView", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destVc = segue.destination as! ResultsViewController
+        
         let bill = Double(billTextField.text!)!
         let tip = getSelectedTip()
         let total = bill + bill * tip
         let numberOfPeople = Double(splitNumberLabel.text!)!
         let perPerson = total / numberOfPeople
-        print(perPerson)
-        performSegue(withIdentifier: "toResultsView", sender: nil)
+        
+        let details = TipDetails(billAmount: bill, totalPerPerson: perPerson, numberOfPeople: Int(numberOfPeople), tipPercent: tip)
+        destVc.tipDetails = details
     }
     
     private func resetButtonState() {

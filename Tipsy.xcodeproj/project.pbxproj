@@ -14,6 +14,7 @@
 		ADB6895C2326708E006D4E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB6895B2326708E006D4E2B /* Assets.xcassets */; };
 		ADB6895F2326708E006D4E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */; };
 		E6A07AC228D3707E00ED5FC9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A07AC128D3707E00ED5FC9 /* ResultsViewController.swift */; };
+		E6A07AC428D3777B00ED5FC9 /* TipDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A07AC328D3777B00ED5FC9 /* TipDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ADB6895E2326708E006D4E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB689602326708E006D4E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6A07AC128D3707E00ED5FC9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		E6A07AC328D3777B00ED5FC9 /* TipDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				ADB6895B2326708E006D4E2B /* Assets.xcassets */,
 				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
 				ADB689602326708E006D4E2B /* Info.plist */,
+				E6A07AC328D3777B00ED5FC9 /* TipDetails.swift */,
 			);
 			path = Tipsy;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */,
 				ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */,
 				E6A07AC228D3707E00ED5FC9 /* ResultsViewController.swift in Sources */,
+				E6A07AC428D3777B00ED5FC9 /* TipDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
